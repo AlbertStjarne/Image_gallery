@@ -11,6 +11,12 @@ function imgClick(e) {
   // Change current image to source of clicked image
   current.src = e.target.src;
 
+  // Add fade in class
+  current.classList.add('fade-in');
+
+  // Remove fade-in class after 0.5 sec
+  setTimeout(() => current.classList.remove('fade-in'), 500);
+
   // Change the opacity
   e.target.style.opacity = opacity;
 }
